@@ -1,0 +1,13 @@
+<p id="danger"><%= flash[:danger] %></p>
+
+<h1>log inpath</h1>
+<%= form_for(:session, url: login_path) do |f| %>
+	<%=f.label :mail%>
+	<%=f.email_field :mail%>
+
+	<%=f.label :password%>
+	<%=f.password_field :password%>
+
+	<%=f.submit "Log in"%>
+<%end%>
+<p><%= link_to " to user", users_path %></p>
