@@ -1,20 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Auxilium</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<% if logger_in? %>
-	now you <%= current_user.name%>
-	<%=link_to "выйти",logout_path , method: :delete  %>
-<%else%>
-	<%=link_to "зайти",login_path %>
-	<%=link_to "зарегаться", singup_path %>	
-<%end%>
-<%= yield %>
+<% if( yield(:load)=="yes" ) %>
+	<%= yield %>
+<% else %>
+	<!DOCTYPE html>
+	<html>
+	<head>
+	  <title>Auxilium</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+	<% if logger_in? %>
+		now you <%= current_user.name%>
+		<%=link_to "выйти",logout_path , method: :delete  %>
+	<%else%>
+		<%=link_to "зайти",login_path %>
+		<%=link_to "зарегаться", singup_path %>	
+		<%=yield(:load)%>
+	<%end%>
 
-</body>
-</html>
+	<%= yield %>
+
+	</body>
+	</html>
+<%end%>

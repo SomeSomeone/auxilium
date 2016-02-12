@@ -13,4 +13,10 @@ class StaticsController < ApplicationController
 
   end
 
+  def questions
+
+    offset = rand(Question.count)
+    @question = Question.offset(offset).first
+    @answers = @question.answer
+  end
 end

@@ -1,0 +1,12 @@
+<% provide(:load , "yes") %>
+<div style="background-color:red">
+	<div>
+		@question.text=<%=@question.text%>
+	</div>
+	<ul>
+		<li id = "<%= @answers[0].id %>">answer 1= <%= @answers[0].content %></li>
+		<li id = "<%= @answers[1].id %>">answer 2= <%= @answers[1].content %></li>
+		<li id = "<%= @answers[2].id %>">answer 3= <%= @answers[2].content %></li>
+		<li id = "<%= @answers[3].id %>">answer 4= <%= @answers[3].content %></li>
+	</ul>
+</div>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   root 'statics#root'
+  get    'questions'    => 'statics#questions'
   get    'about'   => 'statics#about'
   get    'game'    => 'statics#game'
  
