@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
 
   root 'statics#root'
-
   get    'about'   => 'statics#about'
+  get    'game'    => 'statics#game'
  
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

@@ -4,4 +4,13 @@ class StaticsController < ApplicationController
 
   def about
   end
+
+  def game
+ 
+  	@result=Result.new
+  	@result.user=current_user
+  	@result.question_count=0
+
+  end
+
 end
