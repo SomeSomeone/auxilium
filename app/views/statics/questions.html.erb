@@ -1,12 +1,39 @@
 <% provide(:load , "yes") %>
-<div style="background-color:red">
-	<div>
+<div id="button_start_game" style="background-color:red">
+
+
+
+<p>@result.id=<%= @result.id %></p>
+<p>@result.question_count=<%= @result.question_count %></p>
+	<p><%=params%></p>
+	<%if @question_get %>
+	<%=@question_get.text%>
+	<p><%=@question_get.correct_answer_id%>==<%=params[:answer]%></p>
+	<br><%=@lol%>
+	<%end%>
+
+
+
+
+
+
+
+	<div class="question" id="<%= @question.id %>">
 		@question.text=<%=@question.text%>
 	</div>
 	<ul>
-		<li id = "<%= @answers[0].id %>">answer 1= <%= @answers[0].content %></li>
-		<li id = "<%= @answers[1].id %>">answer 2= <%= @answers[1].content %></li>
-		<li id = "<%= @answers[2].id %>">answer 3= <%= @answers[2].content %></li>
-		<li id = "<%= @answers[3].id %>">answer 4= <%= @answers[3].content %></li>
+		<% @answers.each do |answer|%>
+		<li class= "answer" id = "<%= answer.id %>">
+			<%= answer.content %>
+		</li>
+		<%end%>
 	</ul>
 </div>
+<script type="text/javascript">
+	$(".answer").click(function(){
+		$.get( "questions.html", { id : <%=@result.id %> , question: <%=@question.id%> ,answer: this.id } )
+		  .done(function( result) {
+		    $("#game_board").html(result);
+		  });
+    });
+</script>

@@ -6,17 +6,39 @@ class StaticsController < ApplicationController
   end
 
   def game
- 
-  	@result=Result.new
-  	@result.user=current_user
-  	@result.question_count=0
+    if logger_in?
+    	@result=Result.new
+    	@result.user=current_user
+    	@result.question_count=0
+      @result.save
+    else
+      redirect_to root_path
+    end
 
   end
 
   def questions
+    @result=Result.find_by id: params[:id]
+    if @result.nil?
+      redirect_to root_path
+    else
+      
 
-    offset = rand(Question.count)
-    @question = Question.offset(offset).first
-    @answers = @question.answer
+      if( params[:answer] || params[:question])
+        @question_get=Question.find_by id: params[:question]
+        if (@question_get.correct_answer_id==params[:answer].to_i)
+          @result.question_count+=1
+          @result.save
+          #else give result
+        end
+      end
+
+
+      offset = rand(Question.count)
+      @question = Question.offset(offset).first
+      @answers = @question.answer
+
+
+    end
   end
 end

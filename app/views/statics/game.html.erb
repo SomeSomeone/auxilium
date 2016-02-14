@@ -3,18 +3,24 @@
 <p>@result.user=<%= @result.user %></p>
 
 <p>js+ajax ниже</p>
+
+
+
 <button id="button_start_game" >start game</button>
 <div id="game_board">
-	
-
-
 </div>
+
+
+
+
+
 <script type="text/javascript">
 $(document).ready(function(){
     $("#button_start_game").click(function(){
-        $.ajax({url: "questions.html", success: function(result){
-            $("#game_board").html(result);
-        }});
+		$.get( "questions.html", { id : <%=@result.id %>} )
+		  .done(function( result) {
+		    $("#game_board").html(result);
+		  });
     });
 });
 </script>
