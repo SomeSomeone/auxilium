@@ -10,14 +10,16 @@
 	  <%= csrf_meta_tags %>
 	</head>
 	<body>
+
+	<!--
 	<% if logger_in? %>
 		now you <%= current_user.name%>
 		<%=link_to "выйти",logout_path , method: :delete  %>
 	<%else%>
 		<%=link_to "зайти",login_path %>
 		<%=link_to "зарегаться", singup_path %>	
-		<%=yield(:load)%>
 	<%end%>
+	-->
 
 	<%= yield %>
 

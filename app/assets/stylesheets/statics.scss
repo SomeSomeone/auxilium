@@ -1,3 +1,83 @@
 // Place all the styles related to the Statics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#page {
+    max-width:1920px;
+    max-height: 3240px;
+    margin: 0;
+}
+.fon{
+    width: auto;
+    height: auto;
+}
+.block{
+    width: 182px;
+    height: 81px;
+    position: absolute;
+    left: 869px;
+    top: 85px;
+}
+.button {
+    height: 27px;
+    margin-bottom: 27px;
+    background-color: #B594D4;
+}
+.block_center{
+    width: 500px;
+    height: 418px;
+    position: absolute;
+    left: 710px;
+    top: 251px;
+}
+.logo{
+    background-color:#B594D4;
+    height: 418px;
+}
+
+.block_center1{
+    width: 600px;
+    height: 250px;
+    position: absolute;
+    left: 660px;
+    top: 1505px;
+}
+.logo1{
+    background-color: #ADD8E6;
+    height: 250px;
+}
+.block_center2{
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    left: 610px;
+    top: 2625px;
+}
+.logo2{
+    background-color:#B0E0E6;
+    height: 500px;
+}
+.block_photo{
+    width: 100px;
+    height: 500px;
+    position: absolute;
+    left: 450px;
+    top: 2625px;
+}
+.button1 {
+    height: 150px;
+    margin-bottom: 25px;
+    background-color: darkblue;
+}
+.block_photo1{
+    width: 100px;
+    height: 500px;
+    position: absolute;
+    left: 1370px;
+    top: 2625px;
+}
+.button2 {
+    height: 150px;
+    margin-bottom: 25px;
+    background-color: darkblue;
+}

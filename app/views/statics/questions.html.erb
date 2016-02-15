@@ -1,23 +1,5 @@
 <% provide(:load , "yes") %>
 <div id="button_start_game" style="background-color:red">
-
-
-
-<p>@result.id=<%= @result.id %></p>
-<p>@result.question_count=<%= @result.question_count %></p>
-	<p><%=params%></p>
-	<%if @question_get %>
-	<%=@question_get.text%>
-	<p><%=@question_get.correct_answer_id%>==<%=params[:answer]%></p>
-	<br><%=@lol%>
-	<%end%>
-
-
-
-
-
-
-
 	<div class="question" id="<%= @question.id %>">
 		@question.text=<%=@question.text%>
 	</div>
