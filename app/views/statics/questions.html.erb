@@ -5,7 +5,7 @@
 		@question.text=<%=@question.text%>
 	</div>
 	<ul>
-		<% @answers.each do |answer|%>
+		<% @answers.shuffle.each do |answer|%>
 		<li class= "answer" id = "<%= answer.id %>">
 			<%= answer.content %>
 		</li>
