@@ -1,6 +1,7 @@
 <% provide(:load , "yes") %>
 <div id="button_start_game" style="background-color:red">
 	<div class="question" id="<%= @question.id %>">
+		@result.question_count=<%=@result.question_count%>
 		@question.text=<%=@question.text%>
 	</div>
 	<ul>
