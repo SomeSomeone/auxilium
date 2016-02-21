@@ -2,8 +2,11 @@ Rails.application.routes.draw do
 
 
   root 'statics#root'
+ 
   get    'result_in_game'    => 'statics#result_in_game'
-  get    'questions'    => 'statics#questions'
+  get    'questions'         => 'statics#questions'
+  get    'tip_50_to_50'      => 'statics#tip_50_to_50'
+
   get    'about'   => 'statics#about'
   get    'game'    => 'statics#game'
  

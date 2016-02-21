@@ -7,6 +7,8 @@
 
 
 <button id="button_start_game" >start game</button>
+
+
 <div id="game_board">
 </div>
 
@@ -17,7 +19,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
     $("#button_start_game").click(function(){
-		$.get( "questions.html", { id : <%=@result.id %>} )
+		$.get( "questions.html", { id : <%=@result.id %> ,tip: 1 } )
 		  .done(function( result) {
 		    $("#game_board").html(result);
 		  });

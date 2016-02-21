@@ -1,5 +1,8 @@
 <% provide(:load , "yes") %>
 <div id="button_start_game" style="background-color:red">
+
+	<button id="button_tip" >50/50</button>
+
 	<div class="question" id="<%= @question.id %>">
 		@result.question_count=<%=@result.question_count%>
 		@question.text=<%=@question.text%>
@@ -13,10 +16,38 @@
 	</ul>
 </div>
 <script type="text/javascript">
+    var tip_now = <%=params[:tip]%>;    
 	$(".answer").click(function(){
-		$.get( "questions.html", { id : <%=@result.id %> , question: <%=@question.id%> ,answer: this.id } )
+		$.get( "questions.html", { id : <%=@result.id %> , question: <%=@question.id%> ,answer: this.id , tip: tip_now } )
 		  .done(function( result) {
 		    $("#game_board").html(result);
 		  });
+    })
+
+    $("#button_tip").click(function(){
+    	if(tip_now==0) {
+    		return
+    	}
+    	$.get( "tip_50_to_50.html", { question: <%=@question.id%> } )
+		  .done(function( result) {
+		  	$.each(result.split(","),function(index,value){
+		    	console.log( "#"+$.trim(value) );
+		    	$("#"+$.trim(value)).hide();
+		    });
+		    tip_now = 0;
+		  });
     });
+/*
+
+	$("#button_tip").click(function(){
+		$.get( "tip_50_to_50.html", {  question: <%=@question.id%>  )
+		  .done(function( result) {
+		  	$("#button_tip").html(result);
+		    $.each(data.split(","),function(index,value){
+		    	$("#"+value).hide();
+		    });
+		  });
+	});
+*/
+
 </script>
