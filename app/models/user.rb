@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 										format:{with: VALID_MAIL_REGEX},
 										uniqueness: true
 	
-	validates :password, length: {minimum:6}
+	validates :password, length: {minimum:6}, allow_nil: true
 	has_secure_password
 
 	before_save:downcase_mail
