@@ -43,7 +43,7 @@ class StaticsController < ApplicationController
           end
         else
           QuestionsResult.delete_all(result_id: @result.id )
-          redirect_to result_in_game_path(id: params[:id]) and return
+          redirect_to result_in_game_path(text: @question_get.text, answer: params[:answer] , id: params[:id]) and return
         end
       end
       

@@ -1,0 +1,64 @@
+html {height: 100%;
+      width: 100%}
+body{
+    background-image: url(regfon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:center;
+    background-position-x:center;
+    height: 100%;
+    width:100%;
+    font-size: 100%;
+    margin:0;
+    position: absolute;
+}
+.error p {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 120%;
+    color: white;
+}
+.center_block_green{
+    width:28.125%;
+    text-align:center;
+    background-color:rgba( 98, 171, 97, 0.5);
+    height:40% ;
+    min-height:350px;
+    margin:15.7777778%  auto 0 auto;
+}
+.center_block_green div h1{
+    border: none;
+    color:#A3FFD6;
+    font-family: serif;
+    margin-bottom:2%;
+    padding-top:7%;
+    font-size:2.5em;
+}
+.center_block_green div input{
+    width: 74.0740741%;
+    padding:3% 0;
+    background-color: #A3FFD6;
+    opacity: 0.8;
+    border: none;
+    margin-top:4.81927711%;
+    text-align: center;
+    font-size:large;
+    font-family: inherit;
+}
+.center_button_submit_green{
+    height: 4.62962963%;
+    width: 10.4166667%;
+    border: none;
+    background-color:black;
+    opacity: 0.7;
+    color:#A3FFD6;
+    text-align: center;
+    font-family: sans-serif;
+    left: 44.1116667%;
+    position: absolute;
+    font-size:1em;
+    transition-duration: 0.4s;
+}
+.center_button_submit_green:hover {
+    background-color: #A3FFD6; 
+    color: black;

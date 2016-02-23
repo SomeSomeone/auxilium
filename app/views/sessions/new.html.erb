@@ -1,35 +1,19 @@
-<p id="danger"><%= flash[:danger] %></p>
 
-<h1>log inpath</h1>
-<%= form_for(:session, url: login_path) do |f| %>
-	<%=f.label :mail%>
-	<%=f.email_field :mail%>
+<% provide(:css , "sign_in.css") %>
+<div class="error">
+    <p><b><%= flash[:danger] %></b></p>
+</div>
+<div id ="center_block_green">
 
-	<%=f.label :password%>
-	<%=f.password_field :password%>
 
-	<%=f.submit "Log in"%>
+<div>
+    <h1>Sign In</h1>
+    <%= form_for(:session, url: login_path) do |f| %>
+
+        <%=f.email_field :mail%>
+
+        <%=f.password_field :password%>
+</div>
+<br>
+        <%=f.submit "Log in" , :class  => 'center_button_submit_green' %>
 <%end%>
-<p><%= link_to " to user", users_path %></p>
-
-<div id="page">
-    <div class="fon">
-    	<%=image_tag("regfon.jpg")%>
-    </div>
-</div>
-
-<div class ="blreg">
-    <div class = "regreg"></div>
-    </div>   
-     <div class="block_photo">
-            <div class="button"></div>
-            <div class="button"></div>
-           
-    </div> 
-    <div class="text1">
-        <div class="a"> Sign in </div>
-    </div>
-    <div class="text2">
-        <div class="b"> Enter </div>
-    </div>
-</div>

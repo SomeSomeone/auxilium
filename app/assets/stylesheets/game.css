@@ -1,0 +1,126 @@
+html {height: 100%;
+      width: 100%}
+body{
+    background-image: url(question.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:center;
+    background-position-x:center;
+    height: 100%;
+    width:100%;
+    font-size: 100%;
+    margin:0;
+    position: absolute;
+}
+.question_block{
+    width: 44.84375%;
+    height: 10.7407407%;
+    position: absolute;
+    left: 26.7708333%;
+    top: 20%;
+    background-color:#618fa9;
+    opacity: 0.9;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    text-overflow: clip; 
+    padding-top: 3%;
+}
+#button_submit_answer1{
+    height: 5.16666667%;
+    width: 16.6145833%;
+    border: none;
+    background-color:#618fa9;
+    position: absolute;
+    left: 26.7708333%;
+    top: 46.6666667%;
+    transition-duration: 0.1s;
+    color:white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size:1em;
+    padding-top: 1.5%
+}
+#button_submit_answer1:active{
+    background-color: green;
+    color: black;
+}
+#button_submit_answer2{
+    height: 6.66666667%;
+    width: 16.6145833%;
+    border: none;
+    background-color:#618fa9;
+    position: absolute;
+    left: 26.7708333%;
+    top: 60%;
+    position: absolute;
+    transition-duration: 0.1s;
+    color:white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size:1em;
+}
+#button_submit_answer2:active{
+    background-color: red;
+    color: black;
+}
+
+#button_submit_answer3{
+    height: 6.66666667%;
+    width: 16.6145833%;
+    border: none;
+    background-color:#618fa9;
+    color:white;
+    text-align: center;
+    font-family: sans-serif;
+    left: 55%;
+    top: 46.6666667%;
+    position: absolute;
+    font-size:1em;
+    transition-duration: 0.1s;
+}
+#button_submit_answer3:active {
+    background-color: red; 
+    color: black;
+}
+
+#button_submit_answer4{
+    height: 6.66666667%;
+    width: 16.6145833%;
+    border: none;
+    background-color:#618fa9;
+    color:white;
+    text-align: center;
+    font-family: sans-serif;
+    left: 55%;
+    top: 60%;
+    position: absolute;
+    font-size:1em;
+    transition-duration: 0.1s;
+}
+#button_submit_answer4:active {
+    background-color: red; 
+    color: black;
+}
+
+
+.button_50_50{
+    height: 6.66666667%;
+    width: 10%;
+    border: none;
+    background-color:#618fa9;
+    color:white;
+    text-align: center;
+    font-family: sans-serif;
+    left: 26.7708333%;
+    top: 70%;
+    position: absolute;
+    font-size:1em;
+    transition-duration: 0.1s;
+}
+.button_50_50:active {
+    background-color: black; 
+    color: black;
+}
+
