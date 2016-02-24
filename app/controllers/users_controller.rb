@@ -13,6 +13,10 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @results=Result.where("user_id = ?", @user.id)
+    @max=@results.maximum("question_count").to_i
+
+    @levels=["junior" , "middle", "senjor" ]
+    @level=@levels[@max/5] # 5 is number of questions 
   end
 
   # GET /users/new

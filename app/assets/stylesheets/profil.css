@@ -25,7 +25,7 @@ body{
     margin-left: 7.96575342%;
     margin-top:5.46875%;
 }
-.go_back{
+.go_back img{ /*вот тут */
     width: 5.859375%;
     position:absolute;
     margin-left: 85%;
@@ -35,7 +35,7 @@ body{
    margin: 6% 0 0 27.578125%;
 }
 .block_orange_left ul li:first-child {
-    width: 34.663%;
+    width: 38.663%;
     background-color: #e26425;
     list-style-type: none;
     text-align: center;
@@ -53,6 +53,7 @@ body{
     width:50.8150685%;
     color: #e3ca11;
     font-size:120%;
+    font-family: sans-serif;
 }
     .block_yellow_right{
     list-style-type: none;
@@ -63,19 +64,20 @@ body{
     margin-left:56.25%;
     margin-top:13%;
 }
-.lets_go{
-    height: 70.6268657%;
-    width: 74.6268657%;
-    border: 0;
-    background-color: #e26425;
-    margin-left:12.6865672%;
-    margin-top:12.6865672%;
+#letsgo{
+    width: 55%;
+    border: none;
+    background-color:#e26425;
+    position: absolute;
+    left: 22.5%;
+    top: 15%;
+    transition-duration: 0.1s;
+    color:#e3ca11;
+    text-align: center;
     font-family: sans-serif;
-    font-size: 25pt;
-    color: #e3ca11;
-    transition-duration: 0.4s;
+    font-size:1.5em;
 }
-.lets_go:hover {
-    background-color:#e3ca11; 
-    color: #e26425;
+#letsgo:active{
+    background-color: #e3ca11;
+    color: #e25425;
 }

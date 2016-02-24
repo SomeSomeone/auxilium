@@ -1,12 +1,12 @@
 <% provide(:load , "yes") %>
-<%= params%>
-<p>	Игра оконченна</p>
-<%if(@result.question_count>=15)%>
-	<p>вы выйграли</p>
-<%else%>
-	<p>вы проиграли</p>
-<%end%>
-<p> вопросов отвеченно <%=@result.question_count%><p>
-
-<%=link_to "new game" , game_path %>
-<%=link_to  "my profile" , current_user %>
+<div class="question_block">
+	Игра оконченна.
+	<%if(@result.question_count>=15)%>
+		Вы выйграли!
+	<%else%>
+		Вы проиграли.
+	<%end%>
+	Вопросов отвеченно <%=@result.question_count%> .
+</div>
+	<%=link_to "new game" , game_path , :id=>'button_submit_answer1'%>
+	<%=link_to  "my profile" , current_user,:id=>'button_submit_answer3' %>

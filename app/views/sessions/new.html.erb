@@ -4,15 +4,14 @@
     <p><b><%= flash[:danger] %></b></p>
 </div>
 <div id ="center_block_green">
+<div >
+	    <h1>Sign In</h1>
+	    <%= form_for(:session, url: login_path) do |f| %>
 
+	        <%=f.email_field :mail, :placeholder=>"Email"%>
 
-<div>
-    <h1>Sign In</h1>
-    <%= form_for(:session, url: login_path) do |f| %>
-
-        <%=f.email_field :mail%>
-
-        <%=f.password_field :password%>
+	        <%=f.password_field :password , :placeholder=>"Password"%>
+	</div>
 </div>
 <br>
         <%=f.submit "Log in" , :class  => 'center_button_submit_green' %>

@@ -7,13 +7,7 @@ class StaticsController < ApplicationController
 
   def game
     if logger_in?
-    	@result=Result.new
-    	@result.user=current_user
-    	@result.question_count=0
-      @result.save
-
-
-
+      @result=Result.create!( user_id: current_user.id , question_count: 0)
       # generate list question (must be faster)
       3.times{|level| # 3 is count of level
         Question.where(level: level).sample(5).each{|question| # 5 is count of questions

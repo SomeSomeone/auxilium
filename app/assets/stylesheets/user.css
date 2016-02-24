@@ -1,0 +1,36 @@
+html {height: 100%;
+      width: 100%}
+body{
+    background-image: url(user.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:center;
+    background-position-x:center;
+    height: 100%;
+    width:100%;
+    font-size: 100%;
+    position: absolute;
+}
+.user ul{
+   margin:1% 0 0 40%;
+}
+.user ul li {
+    text-align: center;
+    background-color: #e26425;
+    list-style-type: none;
+    width:20%;
+    height: 4%;
+    color: #e3ca11;
+    font-size:120%;
+    opacity: 0.6;
+     margin: 1% 0 0 0;
+}
+.user ul li:nth-child(2n){
+background-color:#618fa9;
+color: white;
+}
+.user ul li:nth-child(2n+1){
+color:#618fa9;
+background-color:white;
+}
+

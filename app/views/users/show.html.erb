@@ -5,15 +5,19 @@
 
 <%provide(:css , "profil.css")%>
 <div class="block_orange_left">
-<img src="/assets/fotka.png">
+<img src="/assets/<%=@level%>.png">
     <%= link_to  image_tag("/assets/button.png", :border => 0), users_path , :class => "go_back"%>
         <ul>
           <li><%= @user.name %></li>
-          <li>Status</li>
-          <li>Games <%=@results.count%></li>
-          <li>Points( max)</li>
+          <li>Status: <%=@level%></li>
+          <li>Games : <%=@results.count%></li>
+          <li>Points( max) : <%= @max %></li>
     </ul>    
 </div>
 <div class="block_yellow_right">
- <%= link_to "Let's play" , game_path , :class => "lets_go"%>
+	<div id="letsgo" type="submit">
+		<p style="margin-top:20%;
+            margin-bottom:20%"><%= link_to "Let's play" , game_path %>
+        </p>
+    </div>
 </div>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <style>
- html {height: 100%;
+/*html {height: 100%;
       width: 100%}
 body{
     background-color:cornflowerblue;
@@ -18,12 +18,16 @@ body{
     font-size: 100%;
     position: absolute;
 }
+*/
+body{
+    background-color:cornflowerblue;/*added*/
+}
 .button_submit{
     height: 6.66666667%;
     width: 16.6666667%;
     border: none;
     left: 41.6666667%;
-    top: 50%;
+    /*top: 50%;*/
     background-color: #9ad1ea;
     position: absolute;
     transition-duration: 0.4s;
@@ -34,6 +38,7 @@ body{
     
 }
 .block_error p{
+    border: gray 0.1em solid;/*added*/
     text-align: center;
     height:15.51851851%;
     margin: 4% 0 0 25%;
@@ -52,8 +57,14 @@ body{
   <!-- This file lives in public/404.html -->
   <div class="block_error">
     <p>The page you were looking for doesn't exist.</p>
-    <p>You may have mistyped the address or the page may have moved.</p>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>
+    You may have mistyped the address or the page may have moved.</p>
+    <p>If you are the application owner check the logs for more information.
+    </p>
+    
+    
+    <br>
+     <a href="/" class="button_submit" type="submit" value="To root page">To root page</a>
   </div>
 
 </body>

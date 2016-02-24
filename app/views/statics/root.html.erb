@@ -2,7 +2,11 @@
 <div id ="center_block_green">
     <div>
         <h1>Welcome to Auxilium</h1>
-         <br><input class="center_button_submit_green" type="submit" value="Login">
-         <br><input class="center_button_submit_green" type="submit" value="Registration">
+         <br>
+        
+         <%= button_to 'Login' , login_path , :class=> "center_button_submit_green", method: :get%>
+        
+         <br>
+         <%= button_to 'Registration' , singup_path , :class=> "center_button_submit_green" , method: :get%>
     </div>
 </div>   
