@@ -1,6 +1,6 @@
 <% provide(:load , "yes") %>
 	<div class="question_block" id="<%= @question.id %>">
-		@question.text=<%=@question.text%>
+		<%=@question.text%>
 	</div>
 	
 	<% @answers.shuffle.each_with_index do |answer,index|%>
