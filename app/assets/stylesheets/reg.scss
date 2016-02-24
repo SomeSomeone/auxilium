@@ -1,7 +1,7 @@
 html {height: 100%;
       width: 100%}
 body{
-    background-image: url(regfon.jpg);
+    background-image: image_url("regfon.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y:center;
@@ -62,3 +62,4 @@ body{
 .center_button_submit_green:hover {
     background-color: #A3FFD6; 
     color: black;
+}
